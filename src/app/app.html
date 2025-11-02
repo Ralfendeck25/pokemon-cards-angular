@@ -1,0 +1,49 @@
+<div class="particles" id="particles"></div>
+
+<app-header></app-header>
+
+<div class="container">
+    <!-- Mensagens de status -->
+    <div style="color: white; text-align: center; margin-bottom: 20px;">
+        <p>Status: 
+            @if (loading) { <span style="color: yellow;">Carregando da API...</span> }
+            @if (error) { <span style="color: red;">Erro na API!</span> }
+            @if (!loading && !error) { <span style="color: green;">Pronto!</span> }
+        </p>
+        <p>Pokémons carregados: {{ pokemonData.length }}</p>
+        <button (click)="loadPokemonFromAPI()" style="margin: 10px; padding: 10px 20px; background: #58a6ff; border: none; border-radius: 5px; color: white; cursor: pointer;">
+            Carregar da API
+        </button>
+    </div>
+
+    @if (loading) {
+        <div class="loading">Carregando Pokémon da API...</div>
+    }
+
+    @if (error) {
+        <div class="error">
+            <h3>Erro ao carregar os Pokémon da API</h3>
+            <p>Verifique sua conexão com a internet</p>
+            <p>Usando dados estáticos por enquanto</p>
+        </div>
+    }
+
+    @for (data of pokemonData; track data.pokemon.id) {
+        <app-pokemon-card [pokemonData]="data"></app-pokemon-card>
+    }
+
+    @if (!loading && !error && pokemonData.length === 0) {
+        <div class="error">
+            Nenhum Pokémon foi carregado.
+        </div>
+    }
+</div>
+
+<footer>
+    <p>Feito com <span class="heart">❤️</span> por 
+        <a href="https://github.com/ralfendeck25" target="_blank" class="github-link">
+            <i class="fab fa-github"></i> ralfendeck25
+        </a>
+    </p>
+    <p>Dados fornecidos pela <a href="https://pokeapi.co/" target="_blank" style="color: white;">PokéAPI</a></p>
+</footer>
