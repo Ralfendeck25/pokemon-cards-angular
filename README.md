@@ -1,59 +1,59 @@
-# PokemonCardsFinal
+<img width="1231" height="608" alt="image" src="https://github.com/user-attachments/assets/4d569a86-e187-41c9-bd7c-392922dd813a" />
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+# Pokémon Cards - Angular
 
-## Development server
+![Pokémon Cards](https://img.shields.io/badge/Angular-20-%23DD0031?style=for-the-badge&logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-%233178C6?style=for-the-badge&logo=typescript)
 
-To start a local development server, run:
+Um projeto Angular com cartas Pokémon interativas que consomem dados da PokéAPI.
+
+## 🚀 Demonstração
+
+Em breve...
+
+## ✨ Funcionalidades
+
+- ✅ Cartas Pokémon com animação de flip
+- ✅ Design responsivo
+- ✅ Animações CSS modernas
+- ✅ Consumo da PokéAPI
+- ✅ Estatísticas dos Pokémon
+- ✅ Tipos com cores temáticas
+- ✅ Partículas animadas no background
+
+## 🛠️ Tecnologias
+
+- **Angular 20** - Framework principal
+- **TypeScript** - Linguagem
+- **RxJS** - Programação reativa
+- **CSS3** - Animações e design
+- **PokéAPI** - Fonte de dados
+
+## 📦 Instalação
 
 ```bash
+# Clonar o repositório
+git clone https://github.com/ralfendeck25/pokemon-cards-angular.git
+
+# Entrar na pasta
+cd pokemon-cards-angular
+
+# Instalar dependências
+npm install
+
+# Executar em desenvolvimento
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# Abrir no navegador
+# http://localhost:4200
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
-```
+👨‍💻 Autor
+Peterson
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+GitHub: @ralfendeck25
 
-```bash
-ng generate --help
-```
+⭐️ Desenvolvido com ❤️ por ralfendeck25
 
-## Building
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
