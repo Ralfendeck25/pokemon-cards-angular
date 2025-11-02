@@ -5,7 +5,7 @@
 ![Pokémon Cards](https://img.shields.io/badge/Angular-20-%23DD0031?style=for-the-badge&logo=angular)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-%233178C6?style=for-the-badge&logo=typescript)
 
-Um projeto Angular com cartas Pokémon interativas que consomem dados da PokéAPI.
+Um projeto Angular com cartas Pokémon interativas que consomem dados da PokéAPI. ⭐️
 
 ## 🚀 Demonstração
 
@@ -54,6 +54,6 @@ Peterson
 
 GitHub: @ralfendeck25
 
-⭐️ Desenvolvido com ❤️ por ralfendeck25
+ Desenvolvido com ❤️ por ralfendeck25
 
 
