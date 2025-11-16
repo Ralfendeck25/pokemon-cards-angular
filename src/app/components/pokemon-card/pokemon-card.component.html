@@ -1,52 +1,70 @@
 <div class="card">
-    <div class="card-inner">
-        <div class="card-front">
-            <div class="pokemon-id">#{{ pokemonData.pokemon.id.toString().padStart(3, '0') }}</div>
-            <img 
-                class="pokemon-image" 
-                [src]="pokemonData.pokemon.sprites.other['official-artwork'].front_default" 
-                [alt]="pokemonData.pokemon.name">
-            <div class="pokemon-name">{{ pokemonData.pokemon.name }}</div>
-            <div class="pokemon-types">
-                @for (type of pokemonData.pokemon.types; track type.type.name) {
-                    <div class="type" [class]="getTypeClass(type.type.name)">
-                        {{ type.type.name }}
-                    </div>
-                }
-            </div>
-        </div>
-        <div class="card-back">
-            <div>
-                <div class="pokemon-name">{{ pokemonData.pokemon.name }}</div>
-                <div class="stats">
-                    @for (stat of statsEntries; track stat[0]) {
-                        <div class="stat">
-                            <span>{{ statNames[stat[0]] || stat[0] }}</span>
-                            <div class="stat-bar">
-                                <div 
-                                    class="stat-value" 
-                                    [class]="getStatClass(stat[0])"
-                                    [style.width.%]="stat[1]">
-                                </div>
-                            </div>
-                            <span>{{ stat[1] }}%</span>
-                        </div>
-                    }
-                </div>
-            </div>
-            <div>
-                <div class="abilities">
-                    <h3>Habilidades</h3>
-                    @for (ability of pokemonData.pokemon.abilities; track ability.ability.name) {
-                        <span class="ability">
-                            {{ ability.ability.name }}
-                        </span>
-                    }
-                </div>
-                <div class="description">
-                    <p>{{ description }}</p>
-                </div>
-            </div>
-        </div>
+  <div class="card-inner">
+
+    <!-- FRONT -->
+    <div class="card-front">
+      <div class="pokemon-id">
+        #{{ pokemonData.pokemon.id.toString().padStart(3, '0') }}
+      </div>
+
+      <img
+        class="pokemon-image"
+        [src]="pokemonData.pokemon.sprites.other['official-artwork'].front_default"
+        [alt]="pokemonData.pokemon.name"
+      >
+
+      <div class="pokemon-name">
+        {{ pokemonData.pokemon.name | titlecase }}
+      </div>
+
+      <div class="pokemon-types">
+        @for (type of pokemonData.pokemon.types; track type.type.name) {
+          <div class="type" [ngClass]="getTypeClass(type.type.name)">
+            {{ type.type.name }}
+          </div>
+        }
+      </div>
     </div>
+
+    <!-- BACK -->
+    <div class="card-back">
+
+      <div class="pokemon-name">
+        {{ pokemonData.pokemon.name | titlecase }}
+      </div>
+
+      <div class="stats">
+        @for (stat of statsEntries; track stat[0]) {
+          <div class="stat">
+            <span>{{ statNames[stat[0]] || stat[0] }}</span>
+
+            <div class="stat-bar">
+              <div
+                class="stat-value"
+                [ngClass]="getStatClass(stat[0])"
+                [style.width.%]="stat[1]"
+              ></div>
+            </div>
+
+            <span>{{ stat[1] }}%</span>
+          </div>
+        }
+      </div>
+
+      <div class="abilities">
+        <h3>Habilidades</h3>
+        @for (ability of pokemonData.pokemon.abilities; track ability.ability.name) {
+          <span class="ability">
+            {{ ability.ability.name }}
+          </span>
+        }
+      </div>
+
+      <div class="description">
+        <p>{{ description }}</p>
+      </div>
+
+    </div>
+
+  </div>
 </div>

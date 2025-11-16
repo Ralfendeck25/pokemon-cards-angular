@@ -14,6 +14,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/pokemon-cards-angular",
+            "baseHref": "/pokemon-cards-angular/",
+            "deployUrl": "/pokemon-cards-angular/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -27,8 +29,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "deployUrl": "/pokemon-cards-angular/"
+            "scripts": []
           },
           "configurations": {
             "production": {
