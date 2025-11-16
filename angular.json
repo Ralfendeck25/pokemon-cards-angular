@@ -28,7 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/pokemon-cards-angular/"
+            "deployUrl": "/pokemon-cards-angular/"
           },
           "configurations": {
             "production": {
